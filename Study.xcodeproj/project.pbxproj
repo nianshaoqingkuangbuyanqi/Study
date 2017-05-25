@@ -731,6 +731,7 @@
 				D5FBD3C21C7DA30D00082772 /* Resources */,
 				9C1D61175AABF1DAC39CCD1F /* [CP] Embed Pods Frameworks */,
 				41A425F64822F96E96B7B875 /* [CP] Copy Pods Resources */,
+				1E02E1A41ED691D800E3BA3B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -753,7 +754,9 @@
 				TargetAttributes = {
 					D5FBD3C31C7DA30D00082772 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = HV6Y832MAR;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -818,6 +821,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1E02E1A41ED691D800E3BA3B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" dc8f72b25fa7672695bdfa19fe4162763af09df5 d7fc0570f3f638f951c488bd9663af6b351d04cc05aa0cdfa558327d99de328e";
+		};
 		41A425F64822F96E96B7B875 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -845,7 +861,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9C1D61175AABF1DAC39CCD1F /* [CP] Embed Pods Frameworks */ = {
@@ -1028,11 +1044,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hao shang (9EYL8Z232A)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = HV6Y832MAR;
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayi121.RenterManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "50db0b01-a0fe-4f72-9063-45f88167d482";
+				PROVISIONING_PROFILE_SPECIFIER = rent_development;
 				SWIFT_OBJC_BRIDGING_HEADER = "Study/Source/WebViewJavascriptBridge/OCBridgeSwift/Study-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -1045,11 +1065,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: hao shang (9EYL8Z232A)";
+				DEVELOPMENT_TEAM = HV6Y832MAR;
 				INFOPLIST_FILE = Study/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.udz.buyer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mayi121.RenterManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "50db0b01-a0fe-4f72-9063-45f88167d482";
+				PROVISIONING_PROFILE_SPECIFIER = rent_development;
 				SWIFT_OBJC_BRIDGING_HEADER = "Study/Source/WebViewJavascriptBridge/OCBridgeSwift/Study-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};

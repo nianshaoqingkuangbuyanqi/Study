@@ -5,5 +5,7 @@ target ’Study’ do
   pod 'WebViewJavascriptBridge', '~> 5.0.5'
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'CHTCollectionViewWaterfallLayout', '~> 0.9.4'
+  pod 'Fabric', '~> 1.6.11'
+  pod 'Crashlytics', '~> 3.8.4'
 end
 

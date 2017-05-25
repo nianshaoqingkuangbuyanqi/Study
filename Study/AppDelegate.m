@@ -10,10 +10,15 @@
 #import "LQMainTCL.h"
 #import "LQBaseNCL.h"
 #import "NSString+Addition.h"
+#import <Crashlytics/Crashlytics.h>
+#import <Fabric/Fabric.h>
+
 
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
+
+
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 
@@ -27,6 +32,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
 
+    //为APP添加崩溃统计
+    [Fabric with:@[[Crashlytics class]]];
+    //测试环境下也能收取崩溃信息，默认为NO
+    [Crashlytics sharedInstance].debugMode = YES;
+    
     NSLog(@"===%@",NSHomeDirectory());
     [self main];
     [self.window makeKeyAndVisible];

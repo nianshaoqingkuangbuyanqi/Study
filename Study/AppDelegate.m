@@ -29,7 +29,7 @@
     
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] init];
 
-    NSLog(@"111");
+    
     NSLog(@"===%@",NSHomeDirectory());
     [self main];
     [self.window makeKeyAndVisible];

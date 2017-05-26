@@ -24,6 +24,7 @@
 #import "LQWaterFallVCL.h"
 #import "LQRuntimeVCL.h"
 #import "LQVideoPlayVCL.h"
+#import "LQSystemFontNameVCL.h"
 @interface LQMainTCL ()
 
 @end
@@ -48,7 +49,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime",@"VideoPlayVCL", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime",@"VideoPlayVCL",@"LQSystemFontNameVCL", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }
@@ -133,7 +134,16 @@
     } else if (indexPath.row == 14) {
         LQVideoPlayVCL *videoPlay = [[LQVideoPlayVCL alloc] init];
         [self.navigationController pushViewController:videoPlay animated:YES];
+    } else {
+        [self createSecondViewControllerWithName:self.dataArray[indexPath.row]];
     }
+}
+
+#pragma mark - 创建二级页面并进行push
+- (void)createSecondViewControllerWithName:(NSString *)name
+{
+    Class class = NSClassFromString(name);
+    [self.navigationController pushViewController:[[class alloc] init] animated:YES];
 }
 
 #pragma mark - 测试联网

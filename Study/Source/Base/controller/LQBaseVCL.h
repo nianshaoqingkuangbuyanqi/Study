@@ -18,9 +18,16 @@
 #import "ImageCache.h"
 #import "NSString+Addition.h"
 #import "LQNetworking.h"
-@interface LQBaseVCL : UIViewController <MBProgressHUDDelegate>
+@interface LQBaseVCL : UIViewController <MBProgressHUDDelegate,UITableViewDelegate,UITableViewDataSource>
 //用于统一的页面传值
 @property (nonatomic,strong) NSDictionary *params;
+
+//tableView
+@property (nonatomic,strong) UITableView *tableView;
+
+//数据源dataArray
+@property (nonatomic,strong) NSMutableArray *dataArray;
+
 //导航添加返回按钮
 - (void)addBackButton;
  
@@ -37,5 +44,7 @@
 
 - (void)addLeftSideReturn;
 
+#pragma mark - 创建tableViewCell
+- (UITableViewCell *)createTableViewCellWithTableView:(UITableView *)tableView CellIdentifier:(NSString *)identifier;
 
 @end

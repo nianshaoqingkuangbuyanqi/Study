@@ -25,6 +25,7 @@
 #import "LQRuntimeVCL.h"
 #import "LQVideoPlayVCL.h"
 #import "LQSystemFontNameVCL.h"
+#import "LQMethodExchangeVCL+WillAppearExchange.h"
 @interface LQMainTCL ()
 
 @end
@@ -49,7 +50,7 @@
 
 - (void)addDataSource
 {
-    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime",@"VideoPlayVCL",@"LQSystemFontNameVCL", nil];
+    NSArray *array = [NSArray arrayWithObjects:@"Animation",@"NSCoding",@"Coredata",@"ImageCache",@"MultiThread",@"Block",@"TablePage",@"CellAdjust",@"BannerScrollView",@"WebViewJavascriptBridge",@"PostImage",@"PhotoChoose",@"WaterFall",@"Objc-Runtime",@"VideoPlayVCL",@"LQSystemFontNameVCL",@"LQMethodExchangeVCL", nil];
     self.dataArray = nil;
     self.dataArray = [[NSMutableArray alloc] initWithArray:array];
 }

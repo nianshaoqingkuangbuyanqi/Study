@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1E2BC1221ED842F300453398 /* LQSystemFontDeatilNameVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2BC1211ED842F300453398 /* LQSystemFontDeatilNameVCL.m */; };
+		1ECBE9951ED94BF500E133AC /* LQMethodExchangeVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBE9941ED94BF500E133AC /* LQMethodExchangeVCL.m */; };
+		1ECBE99F1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECBE99E1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.m */; };
 		1EFD33621ED6EDAD008CADBC /* LQSystemFontNameVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFD33611ED6EDAD008CADBC /* LQSystemFontNameVCL.m */; };
 		B969E04B921A3894927D3E40 /* libPods-Study.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1328AF94317C7980E0A730BE /* libPods-Study.a */; };
 		D505E2FA1D9BA69C00973160 /* LQRuntimeVCL.m in Sources */ = {isa = PBXBuildFile; fileRef = D505E2F91D9BA69C00973160 /* LQRuntimeVCL.m */; };
@@ -103,6 +105,10 @@
 		1328AF94317C7980E0A730BE /* libPods-Study.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Study.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E2BC1201ED842F300453398 /* LQSystemFontDeatilNameVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQSystemFontDeatilNameVCL.h; path = DynamicDownloadFont/LQSystemFontDeatilNameVCL.h; sourceTree = "<group>"; };
 		1E2BC1211ED842F300453398 /* LQSystemFontDeatilNameVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQSystemFontDeatilNameVCL.m; path = DynamicDownloadFont/LQSystemFontDeatilNameVCL.m; sourceTree = "<group>"; };
+		1ECBE9931ED94BF500E133AC /* LQMethodExchangeVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQMethodExchangeVCL.h; path = Runtime/LQMethodExchangeVCL.h; sourceTree = "<group>"; };
+		1ECBE9941ED94BF500E133AC /* LQMethodExchangeVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQMethodExchangeVCL.m; path = Runtime/LQMethodExchangeVCL.m; sourceTree = "<group>"; };
+		1ECBE99D1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LQMethodExchangeVCL+WillAppearExchange.h"; path = "Runtime/LQMethodExchangeVCL+WillAppearExchange.h"; sourceTree = "<group>"; };
+		1ECBE99E1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LQMethodExchangeVCL+WillAppearExchange.m"; path = "Runtime/LQMethodExchangeVCL+WillAppearExchange.m"; sourceTree = "<group>"; };
 		1EFD33601ED6EDAD008CADBC /* LQSystemFontNameVCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LQSystemFontNameVCL.h; path = DynamicDownloadFont/LQSystemFontNameVCL.h; sourceTree = "<group>"; };
 		1EFD33611ED6EDAD008CADBC /* LQSystemFontNameVCL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LQSystemFontNameVCL.m; path = DynamicDownloadFont/LQSystemFontNameVCL.m; sourceTree = "<group>"; };
 		620E81A59BC47D14357C248F /* Pods-Study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study/Pods-Study.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +271,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ECBE9921ED94BCD00E133AC /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				1ECBE9931ED94BF500E133AC /* LQMethodExchangeVCL.h */,
+				1ECBE9941ED94BF500E133AC /* LQMethodExchangeVCL.m */,
+				1ECBE99D1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.h */,
+				1ECBE99E1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.m */,
+			);
+			name = Runtime;
+			sourceTree = "<group>";
+		};
 		1EFD335F1ED6E915008CADBC /* DynamicDownloadFont */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +615,7 @@
 		D5FBD3E01C7DA3E100082772 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1ECBE9921ED94BCD00E133AC /* Runtime */,
 				1EFD335F1ED6E915008CADBC /* DynamicDownloadFont */,
 				D5FF34DF1DAB353E00864F33 /* VideoPlay */,
 				D505E2F71D9BA67500973160 /* Objc-Runtime */,
@@ -909,7 +927,9 @@
 				D508500A1C8D7D0000B1D4ED /* LQSecondTCL.m in Sources */,
 				D5FBD4751C7DA3E100082772 /* LQTitleCell.m in Sources */,
 				D58B9F301C802D3A006C1A8B /* LQCodingVCL.m in Sources */,
+				1ECBE99F1ED94E3800E133AC /* LQMethodExchangeVCL+WillAppearExchange.m in Sources */,
 				D578CA0F1C897D4100ADAAC2 /* LQBlockVCL.m in Sources */,
+				1ECBE9951ED94BF500E133AC /* LQMethodExchangeVCL.m in Sources */,
 				D547746D1D40C16500538149 /* LQLaunchView.m in Sources */,
 				D58B9F2F1C802D3A006C1A8B /* Person.m in Sources */,
 				D5FBD4771C7DA3E100082772 /* JsonChange.m in Sources */,

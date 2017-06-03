@@ -31,7 +31,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-
+    NSLog(@"测试家用电脑");
     //为APP添加崩溃统计
     [Fabric with:@[[Crashlytics class]]];
     //测试环境下也能收取崩溃信息，默认为NO
